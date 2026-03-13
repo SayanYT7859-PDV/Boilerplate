@@ -1,12 +1,15 @@
-# Boilerplate
+# ⚡ God-Tier Hackathon Boilerplate
+**The ultimate "Zero-to-MVP" stack for speed, AI integration, and gamification.**
 
-God-Tier MNC-level hackathon boilerplate web application.
+This boilerplate is engineered for maximum development velocity. It handles the "boring stuff" (Auth, Database, Routing, UI Theming) so you can focus on building your unique features. Optimized to run smoothly even on resource-constrained hardware.
 
-## Stack
-- **Frontend:** React (Vite, JavaScript), Tailwind CSS, shadcn/ui
-- **Backend:** Node.js, Express
-- **Database & Auth:** Supabase (PostgreSQL, Google OAuth)
-- **AI Integration:** Zero-Shot Multi-Modal APIs (vision + text)
+---
 
-## Purpose
-Designed for rapid deployment and adaptation during 6-hour hackathons.
+## 🚀 The "15-Minute" Launch Guide
+
+### 1. Clone & Install
+Open two terminal windows (one for Backend, one for Frontend).
+
+**Backend:**
+```bash
+cd backend && npm install
