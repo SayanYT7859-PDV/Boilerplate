@@ -1,0 +1,12 @@
+{
+  "name": "god-boilerplate-root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:reset-frontend-port": "powershell -NoProfile -Command \"Get-NetTCPConnection -LocalPort 5173 -State Listen -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }; exit 0\"",
+    "dev": "npm run dev:reset-frontend-port && concurrently -k -n backend,frontend -c green,cyan \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

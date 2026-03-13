@@ -34,7 +34,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 
 const gemini = new GoogleGenerativeAI(geminiApiKey)
 const visionModel = gemini.getGenerativeModel({
-  model: 'gemini-1.5-flash',
+  model: 'gemini-2.5-flash',
   systemInstruction: GEMINI_SYSTEM_PROMPT,
 })
 const upload = multer({
@@ -201,7 +201,7 @@ app.post(
     try {
       const result = await runGeminiWithRetry(() =>
         callGeminiWithTimeout([
-          'Return only valid JSON.',
+          { text: 'Return only valid JSON.' },
           imagePart,
         ]),
       )
